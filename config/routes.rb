@@ -4,5 +4,6 @@ Rails.application.routes.draw do
     resources :stories, only: [:index, :create, :update, :destroy]
   end
 
-  root "site#index"
+  get "app", to: "site#index", as: "app"
+  root "home#index"
 end
